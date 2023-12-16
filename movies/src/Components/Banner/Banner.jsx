@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { img_url } from "../../requests";
 import { Carousel } from "react-responsive-carousel";
 import { Link, useParams } from "react-router-dom";
 import "./Banner.css";
@@ -39,9 +40,7 @@ const Banner = ({ url }) => {
               <div className="BannerImg">
                 <img
                   key={movie.id}
-                  src={`https://image.tmdb.org/t/p/original/${
-                    movie && movie.backdrop_path
-                  }`}
+                  src={`${img_url}${movie && movie.backdrop_path}`}
                   alt={movie.original_name || movie.original_title}
                 />
               </div>

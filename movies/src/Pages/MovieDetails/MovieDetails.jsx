@@ -39,9 +39,11 @@ const MovieDetails = () => {
       <div className="allDetails">
         <div className="MovieLeft">
           <img
-            key={id}
+            key={movie.id}
             className="poster"
-            src={`${img_url}/${movie && movie.poster_path}`}
+            src={`https://image.tmdb.org/t/p/w500/${
+              movie && movie.poster_path
+            }`}
             alt="poster_img"
           />
         </div>

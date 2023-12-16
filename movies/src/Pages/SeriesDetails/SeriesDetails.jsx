@@ -5,21 +5,20 @@ import Row from "../../Components/Row/Row";
 import CastsList from "../../Components/CastsList/CastsList";
 import VideosList from "../../Components/VideosList/VideosList";
 import "./SeriesDetails.css";
-// import "../MovieDetails/MovieDetails.css";
 
 const SeriesDetails = () => {
-  const [series, setSeries] = useState([]);
+  const [series, setSeries] = useState({});
   const { id } = useParams();
 
   useEffect(() => {
     const getDetails = async () => {
       const series_data = await fetch(
-        `${base_url}/tv/${id}?api_key=${key}&language=en-US`
+        `${base_url}tv/${id}?api_key=${key}&language=en-US`
       );
       const series_data_json = await series_data.json();
       setSeries(series_data_json);
       window.scrollTo(0, 0);
-      // console.log(all_data);
+      // console.log(series_data_json);
     };
     getDetails();
   }, [id]);
@@ -31,7 +30,7 @@ const SeriesDetails = () => {
         <img
           key={series.id}
           className="backdrop"
-          src={`${img_url}/${
+          src={`${img_url}${
             series && (series.backdrop_path || series.poster_path)
           }`}
           alt="backdrop_img"
@@ -42,33 +41,35 @@ const SeriesDetails = () => {
           <img
             key={series.id}
             className="poster"
-            src={`${img_url}/${series && series.poster_path}`}
+            src={`https://image.tmdb.org/t/p/w500/${
+              series && series.poster_path
+            }`}
             alt="poster_img"
           />
         </div>
         <div className="MovieRight">
           <div className="movie_title">
-            {series ? series.original_title || series.original_name : ""}
+            {series ? series.name || series.original_name : ""}
           </div>
           <div className="rating_genres">
             <div className="all_ratings">
               <div className="release">
-                {series ? series.last_air_date : ""}
+                {series ? series.first_air_date || series.last_air_date : ""}
               </div>
               <div className="seasons">
                 Seasons : {series ? series.number_of_seasons : ""}
               </div>
               <div className="rating">
-                {series ? series.vote_average : ""}
+                {series ? "Rating : " + series.vote_average : ""}
                 <i className="fas fa-star" />
-                {series ? " (" + series.vote_count + ")Votes" : ""}
+                {series ? "  (" + series.vote_count + ")Votes" : ""}
               </div>
             </div>
             <div className="genres">
               {series.genres &&
                 series.genres.map((genre) => (
                   <span key={genre.id} className="genre">
-                    {genre.name}
+                    {genre ? genre.name : ""}
                   </span>
                 ))}
             </div>
@@ -85,7 +86,7 @@ const SeriesDetails = () => {
       <div className="row">
         <Row
           title="You May Also Like"
-          fetchURL={`${base_url}/tv/${id}/similar?api_key=${key}`}
+          fetchURL={`${base_url}tv/${id}/similar?api_key=${key}`}
           content="tv"
         />
       </div>
