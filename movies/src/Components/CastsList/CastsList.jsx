@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { base_url, key } from "../../requests";
 import "./CastsList.css";
 
 const CastsList = ({ type }) => {
@@ -9,7 +10,7 @@ const CastsList = ({ type }) => {
   useEffect(() => {
     const getCasts = async () => {
       const data = await fetch(
-        `https://api.themoviedb.org/3/${type}/${id}/credits?api_key=5398fb6049166b54d42e730f66c72f31`
+        `${base_url}${type}/${id}/credits?api_key=${key}`
       );
       const castData = await data.json();
       setCasts(castData.cast);

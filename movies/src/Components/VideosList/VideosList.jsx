@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { base_url, key } from "../../requests";
 import "./VideosList.css";
 
 const VideosList = ({ type }) => {
@@ -9,11 +10,11 @@ const VideosList = ({ type }) => {
   useEffect(() => {
     const getVideos = async () => {
       const data = await fetch(
-        `https://api.themoviedb.org/3/${type}/${id}/videos?api_key=5398fb6049166b54d42e730f66c72f31`
+        `${base_url}${type}/${id}/videos?api_key=${key}`
       );
       const Adata = await data.json();
       setVideos(Adata.results);
-      //   console.log(Adata.results);
+      // console.log(Adata.results);
     };
     getVideos();
   }, [id, type]);
@@ -22,10 +23,10 @@ const VideosList = ({ type }) => {
     <div className="Videos">
       {videos.slice(0, 5).map((video, i) => (
         <div className="video_details" key={i}>
-          <div className="video_title">{video ? video?.name : ""}</div>
+          <div className="video_title">{video ? video.name : ""}</div>
           <div className="video_frame">
             <iframe
-              src={`https://www.youtube.com/embed/${video?.key}`}
+              src={`https://www.youtube.com/embed/${video && video.key}`}
               title="video"
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

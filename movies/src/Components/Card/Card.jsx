@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import { Link } from "react-router-dom";
+import { img_url } from "../../requests";
 import "./Card.css";
 
 const Card = ({ movie, type, movieId }) => {
@@ -26,9 +27,7 @@ const Card = ({ movie, type, movieId }) => {
             <div className="cardImg">
               <img
                 key={movieId}
-                src={`https://image.tmdb.org/t/p/original/${
-                  movie && movie.poster_path
-                }`}
+                src={`${img_url}${movie && movie.poster_path}`}
                 className="cards_img"
                 alt={movie.original_title || movie.original_name}
               />
