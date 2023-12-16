@@ -1,0 +1,116 @@
+.detailsPage {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.bgImg {
+  /* border: 1px solid #fff; */
+  height: 650px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gradient {
+  position: absolute;
+  height: 650px;
+  width: 100%;
+  background: linear-gradient(to top, #131a22, #131a2236);
+}
+.bgImg .backdrop {
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.allDetails {
+  /* border: 1px solid #fff; */
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  top: 280px;
+  display: flex;
+  justify-content: center;
+  /* padding: 0rem 0rem 0rem 12rem; */
+}
+.MovieLeft {
+  /* border: 4px solid blue; */
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+}
+.MovieLeft .poster {
+  height: 550px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.MovieRight {
+  /* border: 3px solid #fff; */
+  /* position: relative; */
+  height: auto;
+  width: 60%;
+  z-index: 1000;
+  margin-left: 2rem;
+}
+.MovieRight .movie_title {
+  font-size: 3.7rem;
+  line-height: 4.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.MovieRight .rating_genres {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.rating_genres .all_ratings {
+  display: flex;
+  padding-bottom: 15px;
+  font-size: 1.3rem;
+}
+.all_ratings .seasons {
+  margin-left: 3rem;
+}
+.all_ratings .duration {
+  margin-left: 3rem;
+}
+.all_ratings .rating {
+  margin-left: 3rem;
+}
+.rating_genres .genres {
+  /* border: 1px solid #fff; */
+  font-size: 1.1rem;
+  font-weight: 400;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.genres .genre {
+  border: 2px solid #fff;
+  cursor: pointer;
+  padding: 7px 20px;
+  border-radius: 25px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  transition: 0.15s ease-in-out;
+}
+.genres .genre:hover {
+  background-color: #fff;
+  color: #131a22;
+  font-weight: 500;
+}
+.MovieRight .MovieOverview {
+  /* width: 90%; */
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+.all_videos {
+  /* position: relative; */
+  top: 340px;
+}
+.row {
+  /* border: 2px solid #fff; */
+  position: relative;
+  top: 350px;
+  padding-bottom: 5rem;
+}

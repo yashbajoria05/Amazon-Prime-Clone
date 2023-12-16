@@ -1,0 +1,44 @@
+.Movies_content {
+  /* border: 2px solid #fff; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 5rem;
+}
+
+.page_headers {
+  /* border: 1px solid #fff; */
+  width: 78%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0 1rem 0;
+}
+.page_title {
+  font-size: 25px;
+  font-weight: 700;
+}
+.movie_list {
+  /* border: 2px solid #fff; */
+  margin-top: 1rem;
+  height: auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.link_btns {
+  text-decoration: none;
+  padding: 8px 10px;
+  border: 1ps solid #fff;
+  color: #fff;
+  margin-left: 15px;
+  font-weight: 500;
+  font-size: 17px;
+}
+.all_btns .active {
+  background: #fff;
+  color: #111;
+}

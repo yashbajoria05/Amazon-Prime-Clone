@@ -1,0 +1,29 @@
+.error {
+  color: #fff;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.error div {
+  font-weight: 700;
+  font-size: 13rem;
+}
+.error .notFound {
+  margin-top: -1.9rem;
+  font-size: 1.9rem;
+}
+.error .notExist {
+  margin-top: -1.2rem;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.error .Homelink {
+  outline: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  color: #111;
+  font-weight: 500;
+  background-color: #fff;
+}

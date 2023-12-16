@@ -1,0 +1,32 @@
+.Header {
+  height: 60px;
+  background-color: #1a242f;
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.all_links {
+  /* border: 2px solid #fff; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: auto 40px;
+}
+.logo {
+  margin-top: 5px;
+  max-width: 110px;
+}
+.links {
+  text-decoration: none;
+  padding: 4px 10px;
+  margin-right: 30px;
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.all_links .active {
+  background-color: #fff;
+  font-weight: 500;
+  color: #1a242f;
+}

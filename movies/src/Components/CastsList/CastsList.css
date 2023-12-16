@@ -1,0 +1,24 @@
+.Casts {
+  margin-top: 5px;
+}
+.Casts h2 {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+.casts_list {
+  /* border: 2px solid #fff; */
+  margin-top: -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.cast_profile {
+  /* border: 2px solid #fff; */
+  width: 100px;
+  padding: 5px;
+}
+.cast_profile .cast_pic {
+  width: 100px;
+}
+.cast_profile .cast_title {
+  font-size: 0.9rem;
+}

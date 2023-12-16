@@ -1,0 +1,29 @@
+.Videos {
+  padding: 0rem 9rem;
+  overflow-x: scroll;
+}
+.Videos::-webkit-scrollbar {
+  display: none;
+}
+.video_details {
+  padding: 2rem 4rem;
+}
+.video_title {
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+}
+.video_frame {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+  /* padding: 10px; */
+}
+.video_frame iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+}

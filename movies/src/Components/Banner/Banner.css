@@ -1,0 +1,76 @@
+.Banner {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  overflow: hidden;
+  /* border: 2px solid #fff; */
+}
+.BannerImg {
+  position: relative;
+  top: -28px;
+  height: 560px;
+  object-fit: contain;
+  object-position: center center;
+}
+.img_gradient1 {
+  position: absolute;
+  height: 565px;
+  width: 60%;
+  z-index: 4;
+  background: linear-gradient(to right, #131a22, #00000000);
+}
+.img_gradient2 {
+  position: absolute;
+  height: 415px;
+  top: 150px;
+  width: 100%;
+  background: linear-gradient(to top, #131a22, #00000000);
+  z-index: 4;
+}
+.BannerOverlay {
+  /* border: 2px solid #fff; */
+  position: absolute;
+  width: 90%;
+  height: 230px;
+  top: 150px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0 7rem;
+  color: #fff;
+  z-index: 6;
+}
+.Banner_title {
+  font-size: 3.5rem;
+  text-align: left;
+  font-weight: 700;
+}
+.Banner_details {
+  display: flex;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.Banner_release {
+  margin-right: 2rem;
+}
+.Banner_description {
+  /* border: 2px solid #fff; */
+  margin-top: 0.3rem;
+  width: 65%;
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: left;
+}
+.btns {
+  margin-top: 0.5rem;
+}
+.link {
+  /* border: 1.5px solid #fff; */
+  text-decoration: none;
+  padding: 10px 18px;
+  margin-right: 1.5rem;
+  color: #131a22;
+  font-weight: 600;
+  font-size: 18px;
+  background-color: #fff;
+}
