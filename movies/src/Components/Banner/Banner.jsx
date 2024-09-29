@@ -53,7 +53,8 @@ const Banner = ({ url }) => {
                     {movie ? movie.first_air_date || movie.release_date : ""}
                   </div>
                   <div className="Banner_rating">
-                    {movie ? movie.vote_average : ""}
+                    {movie ? movie.vote_average + " " : ""}
+                    <i className="fas fa-star" />
                   </div>
                 </div>
                 <p className="Banner_description">

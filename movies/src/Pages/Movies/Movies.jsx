@@ -35,7 +35,11 @@ const Movies = () => {
       <div className="Movies_content">
         <div className="page_headers">
           <div className="page_title">
-            {type ? type.toUpperCase() : "POPULAR"}
+            {type
+              ? type === "top_rated"
+                ? "TOP RATED"
+                : type.toUpperCase()
+              : "POPULAR"}
           </div>
           <div className="all_btns">
             <NavLink
