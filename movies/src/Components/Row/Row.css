@@ -1,6 +1,7 @@
 .container {
-  padding: 0rem 8.3rem;
-  /* border: 2px solid #fff; */
+  padding: 0rem 8rem;
+  /* border: 1px solid #fff; */
+  width: 100vw;
 }
 .container h2 {
   font-size: 30px;
@@ -15,7 +16,7 @@
   overflow-y: hidden;
   overflow-x: scroll;
   padding: 37px 20px;
-  z-index: -100;
+  z-index: -10;
   /* border: 1px solid #fff; */
 }
 .row_posters::-webkit-scrollbar {

@@ -26,6 +26,11 @@ const Header = () => {
           Search
         </NavLink>
       </div>
+      <div className="Register">
+        <NavLink to="/signup" className="links login_btn">
+          Login
+        </NavLink>
+      </div>
     </div>
   );
 };

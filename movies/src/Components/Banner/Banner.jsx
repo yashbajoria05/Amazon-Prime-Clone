@@ -26,7 +26,7 @@ const Banner = ({ url }) => {
           showThumbs={false}
           autoPlay={true}
           infiniteLoop={true}
-          transitionTime={3}
+          interval={4000}
           showStatus={false}
         >
           {banner.map((movie) => (
@@ -57,7 +57,7 @@ const Banner = ({ url }) => {
                   </div>
                 </div>
                 <p className="Banner_description">
-                  {movie ? movie.overview.slice(0, 150) + "..." : ""}
+                  {movie ? movie.overview.slice(0, 100) + "..." : ""}
                 </p>
                 <div className="btns">
                   <Link

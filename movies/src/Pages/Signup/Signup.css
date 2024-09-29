@@ -1,0 +1,13 @@
+.signup_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+.signup_box {
+  border-radius: 10px;
+  padding: 35px 30px;
+  width: 65vh;
+  border: 2px solid #2f4256;
+  background-color: #1a242f;
+}

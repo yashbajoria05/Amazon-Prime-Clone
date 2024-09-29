@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
-import Banner from "../../Components/Banner/Banner";
 import requests, { base_url, key } from "../../requests";
+import Banner from "../../Components/Banner/Banner";
 import Card from "../../Components/Card/Card";
 import "./Movies.css";
 
@@ -12,13 +12,13 @@ const Movies = () => {
   useEffect(() => {
     const getMovies = async () => {
       const data = await fetch(
-        `${base_url}/${isMovie === "movies" ? "movie" : "tv"}/${
+        `${base_url}${isMovie === "movies" ? "movie" : "tv"}/${
           type ? type : "popular"
         }?api_key=${key}&page=2&language=en-US`
       );
       const actualData = await data.json();
       setMovies(actualData.results);
-      //   console.log(actualData.results);
+      // console.log(actualData.results);
     };
     getMovies();
   }, [type, isMovie]);

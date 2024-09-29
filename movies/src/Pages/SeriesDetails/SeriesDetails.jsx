@@ -75,9 +75,7 @@ const SeriesDetails = () => {
             </div>
           </div>
           <div className="MovieOverview">{series ? series.overview : ""}</div>
-          <div className="casts">
-            <CastsList type="tv" key={id} />
-          </div>
+          <CastsList type="tv" key={id} />
         </div>
       </div>
       <div className="all_videos">

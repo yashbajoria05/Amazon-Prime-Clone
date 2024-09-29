@@ -13,7 +13,7 @@ const MovieDetails = () => {
   useEffect(() => {
     const getDetails = async () => {
       const data = await fetch(
-        `${base_url}/movie/${id}?api_key=${key}&language=en-US`
+        `${base_url}movie/${id}?api_key=${key}&language=en-US`
       );
       const all_data = await data.json();
       setMovie(all_data);
